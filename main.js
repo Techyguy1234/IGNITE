@@ -55,7 +55,26 @@ function renderEvents() {
     eventList.appendChild(eventItem);
   });
 }
+document.addEventListener("DOMContentLoaded", function () {
+  renderEvents();
+  menuHandler();
 
+  // Calendar iframe handling
+  const calendarFrame = document.getElementById("calendar-frame");
+
+  // URLs for different calendar views
+  const mobileCalendarSrc =
+    "https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&bgcolor=%23ffffff&mode=AGENDA&showTitle=0&src=anJoaWdobWNhQGdtYWlsLmNvbQ&color=%23039BE5";
+  const desktopCalendarSrc =
+    "https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&bgcolor=%23ffffff&mode=MONTH&showTitle=0&src=anJoaWdobWNhQGdtYWlsLmNvbQ&color=%23039BE5";
+
+  // Set the calendar iframe src based on screen width
+  if (window.innerWidth <= 768) {
+    calendarFrame.src = mobileCalendarSrc; // for mobile devices
+  } else {
+    calendarFrame.src = desktopCalendarSrc; // for desktop devices
+  }
+});
 
 document.addEventListener("DOMContentLoaded", renderEvents);
 menuHandler();
