@@ -64,6 +64,18 @@ header nav .nav-left-side {
   align-items: center;
   flex: 0.15;
 }
+@media (max-width: 768px) {
+  header nav .nav-left-side {
+    flex: 0.25;
+    margin-top: auto;
+  }
+}
+@media (max-width: 425px) {
+  header nav .nav-left-side {
+    flex: 0.55;
+    margin-top: auto;
+  }
+}
 header nav .nav-left-side a {
   margin-left: 8px;
   font-style: normal;
