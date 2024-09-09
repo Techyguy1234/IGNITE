@@ -20,32 +20,29 @@ const events = [
   },
 ];
 function menuHandler() {
-  document
-    .querySelector("#open-nav-menu")
-    .addEventListener("click", function () {
-      document.querySelector("header nav .wrapper").classList.add("nav-open");
-    });
+  document.querySelector("#open-nav-menu").addEventListener("click", () => {
+    document.querySelector("header nav .wrapper").classList.add("nav-open");
+  });
 
-  document
-    .querySelector("#close-nav-menu")
-    .addEventListener("click", function () {
-      document
-        .querySelector("header nav .wrapper")
-        .classList.remove("nav-open");
-    });
+  document.querySelector("#close-nav-menu").addEventListener("click", () => {
+    document.querySelector("header nav .wrapper").classList.remove("nav-open");
+  });
 
-  const menuItems = document.querySelectorAll("header nav .wrapper");
-  menuItems.forEach((item) => {
-    item.addEventListener("click", function () {
-      document
-        .querySelector("header nav .wrapper")
-        .classList.remove("nav-open");
-    });
+  // Close the nav menu if any link inside the wrapper is clicked
+  document.querySelector("header nav .wrapper").addEventListener("click", (event) => {
+    if (event.target.tagName === 'A') {
+      document.querySelector("header nav .wrapper").classList.remove("nav-open");
+    }
   });
 }
 
+
 function renderEvents() {
   const eventList = document.getElementById("events");
+  if (!eventList) {
+    console.error('Element with ID "events" not found.');
+    return;
+  }
   events.forEach((event) => {
     const eventItem = document.createElement("div");
     eventItem.className = "event-item";
@@ -58,6 +55,7 @@ function renderEvents() {
     eventList.appendChild(eventItem);
   });
 }
+
 
 document.addEventListener("DOMContentLoaded", renderEvents);
 menuHandler();
