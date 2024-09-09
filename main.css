@@ -190,7 +190,16 @@ header nav .wrapper ul li.socials p {
   width: 37%;
   min-width: 25%;
 }
-
+@media (max-width: 768px) {
+  .overlay-box {
+    width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  .overlay-box {
+    width: 70%;
+  }
+}
 /* About Section */
 .about {
   background-color: #f9f9f9;
@@ -262,12 +271,22 @@ header nav .wrapper ul li.socials p {
   float: left;
 }
 
+@media (max-width: 480px) {
+  .about-text {
+    width: 100%;
+  }
+}
 .about-image img {
   width: 50%;
   border-radius: 5px;
   float: right;
   overflow: hidden;
   clip-path: inset(0 20% 0 15%);
+}
+@media (max-width: 480px) {
+  .about-image img {
+    width: 0%;
+  }
 }
 
 /* Events Section */
