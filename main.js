@@ -29,13 +29,16 @@ function menuHandler() {
   });
 
   // Close the nav menu if any link inside the wrapper is clicked
-  document.querySelector("header nav .wrapper").addEventListener("click", (event) => {
-    if (event.target.tagName === 'A') {
-      document.querySelector("header nav .wrapper").classList.remove("nav-open");
-    }
-  });
+  document
+    .querySelector("header nav .wrapper")
+    .addEventListener("click", (event) => {
+      if (event.target.tagName === "A") {
+        document
+          .querySelector("header nav .wrapper")
+          .classList.remove("nav-open");
+      }
+    });
 }
-
 
 function renderEvents() {
   const eventList = document.getElementById("events");
@@ -55,6 +58,8 @@ function renderEvents() {
     eventList.appendChild(eventItem);
   });
 }
+// Existing events and menuHandler code
+
 document.addEventListener("DOMContentLoaded", function () {
   renderEvents();
   menuHandler();
@@ -75,6 +80,3 @@ document.addEventListener("DOMContentLoaded", function () {
     calendarFrame.src = desktopCalendarSrc; // for desktop devices
   }
 });
-
-document.addEventListener("DOMContentLoaded", renderEvents);
-menuHandler();
