@@ -90,6 +90,11 @@ header nav .nav-right-side input[type="checkbox"] {
 header nav .nav-right-side label {
   cursor: pointer;
 }
+header nav .wrapper ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 header nav .wrapper {
   position: fixed;
   top: 0;
