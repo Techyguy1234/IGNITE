@@ -9,7 +9,7 @@ const events = [
   {
     title: "Operation Christmas Child Shopping",
     date: "November 13th, 7-8PM",
-    img: "https://www.samaritans-purse.org.uk/sites/default/files/resources/OCC-logo.pngq=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "https://s3.theark.cloud/sp-comm-arkfiles/website/occ/images/occ-printable-resources/2017/dl/occ-logo-1200x1200.png?_gl=1*76vppw*_gcl_au*MTYyMDQ2MTY2MS4xNzI1ODkzNjI1",
     description: "More details to come",
   },
   {
