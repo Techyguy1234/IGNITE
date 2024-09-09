@@ -1,146 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IGNITE</title>
-    <link rel="stylesheet" href="main.css" />
-  </head>
+// Example: Dynamically load events from an array
+const events = [
+  {
+    title: "IGNITE Kick Off!!",
+    date: "September 4th, 7-8PM",
+    img: "https://images.unsplash.com/photo-1517263904808-5dc91e3e7044?q=80&w=3088&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Wednesday night kickoff party",
+  },
+  {
+    title: "Fall Party",
+    date: "October 6th, 4-7PM",
+    img: "https://images.unsplash.com/photo-1516700675895-b2e35cae333c?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Fall party with a progressive dinner/hayride",
+  },
+  {
+    title: "Christmas Party",
+    date: "December 11th, 6-8PM",
+    img: "https://images.unsplash.com/photo-1544277879-42659615e478?q=80&w=2976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Christmas Party!!",
+  },
+];
+function menuHandler() {
+  document
+    .querySelector("#open-nav-menu")
+    .addEventListener("click", function () {
+      document.querySelector("header nav .wrapper").classList.add("nav-open");
+    });
 
-  <body>
-    <!-- Header -->
-    <header>
-      <nav class="container">
-        <div class="nav-left-side">
-          <img
-            src="https://i.postimg.cc/hGT9MnWk/IGNITE-Header.png"
-            alt="IGNITE Logo"
-          />
-        </div>
+  document
+    .querySelector("#close-nav-menu")
+    .addEventListener("click", function () {
+      document
+        .querySelector("header nav .wrapper")
+        .classList.remove("nav-open");
+    });
 
-        <button id="open-nav-menu">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M3 12C3 11.5858 3.33579 11.25 3.75 11.25H20.25C20.6642 11.25 21 11.5858 21 12C21 12.4142 20.6642 12.75 20.25 12.75H3.75C3.33579 12.75 3 12.4142 3 12Z"
-              fill="black"
-            />
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M3 6C3 5.58579 3.33579 5.25 3.75 5.25H15C15.4142 5.25 15.75 5.58579 15.75 6C15.75 6.41421 15.4142 6.75 15 6.75H3.75C3.33579 6.75 3 6.41421 3 6Z"
-              fill="black"
-            />
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M3 18C3 17.5858 3.33579 17.25 3.75 17.25H15C15.4142 17.25 15.75 17.5858 15.75 18C15.75 18.4142 15.4142 18.75 15 18.75H3.75C3.33579 18.75 3 18.4142 3 18Z"
-              fill="black"
-            />
-          </svg>
-        </button>
+  const menuItems = document.querySelectorAll("header nav .wrapper");
+  menuItems.forEach((item) => {
+    item.addEventListener("click", function () {
+      document
+        .querySelector("header nav .wrapper")
+        .classList.remove("nav-open");
+    });
+  });
+}
 
-        <div class="wrapper">
-          <ul>
-            <li>
-              <button id="close-nav-menu">
-                <svg
-                  width="47"
-                  height="47"
-                  viewBox="0 0 47 47"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M11.7505 11.7495L35.2505 35.2495"
-                    stroke="#004237"
-                    stroke-width="6"
-                  />
-                  <path
-                    d="M35.2502 11.7502L11.7502 35.2502"
-                    stroke="#004237"
-                    stroke-width="6"
-                  />
-                </svg>
-              </button>
-            </li>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">Who We Are</a></li>
-            <li><a href="#events">Events</a></li>
-            <li><a href="calendar.html">Calendar</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+function renderEvents() {
+  const eventList = document.getElementById("events");
+  events.forEach((event) => {
+    const eventItem = document.createElement("div");
+    eventItem.className = "event-item";
+    eventItem.innerHTML = `
+      <img src="${event.img}" alt="${event.title}">
+      <h4>${event.title}</h4>
+      <p class="event-date">${event.date}</p>
+      <p class="event-desc">${event.description}</p>
+    `;
+    eventList.appendChild(eventItem);
+  });
+}
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-content">
-        <!-- <img src="gallery/image1.jpg" alt="Hero Image" class="hero-image" /> -->
-        <div class="overlay-box">
-          <h2>Burn Bright, Live Bold</h2>
-          <p>Join us in discovering faith, community, and purpose.</p>
-          <!-- <a href="#about" class="btn">Learn More</a> -->
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-      <div class="about-content">
-        <div class="about-text">
-          <h4>WHO WE ARE</h4>
-          <h1>Building a strong foundation</h1>
-          <p>
-            We understand that middle school is a time of self-discovery and
-            finding one's place in the world. At IGNITE, we offer a welcoming
-            environment where students can uncover a sense of belonging and
-            delve into their identity as individuals crafted by Jesus. Join us
-            as we journey together in faith and community
-          </p>
-        </div>
-        <div class="about-image">
-          <img
-            src="https://cdn.b12.io/client_media/usFx2Tt1/cc2d8ff0-657f-11ef-ad92-0242ac110002-jpg-hero_image.jpeg"
-            alt="About Image"
-          />
-        </div>
-      </div>
-    </section>
-
-    <!-- Events Section -->
-    <section id="events" class="events">
-      <div class="container">
-        <div class="event-head">
-          <h3>Upcoming Events</h3>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-      <div class="container">
-        <h3>Contact Us</h3>
-        <p>
-          For more information, please reach out to us at
-          <a href="mailto:jrhighmca@gmail.com">jrhighmca@gmail.com</a>
-        </p>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <p>&copy; 2024 Matt Schlabach. All rights reserved.</p>
-      </div>
-    </footer>
-    <script src="main.js"></script>
-  </body>
-</html>
+document.addEventListener("DOMContentLoaded", renderEvents);
+menuHandler();
