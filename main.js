@@ -7,6 +7,12 @@ const events = [
     description: "Fall party with a progressive dinner/hayride",
   },
   {
+    title: "Operation Christmas Child Shopping",
+    date: "November 13th, 7-8PM",
+    img: "https://www.samaritans-purse.org.uk/sites/default/files/resources/OCC-logo.pngq=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "More details to come",
+  },
+  {
     title: "Christmas Party",
     date: "December 11th, 5:30-8:30PM",
     img: "https://images.unsplash.com/photo-1544277879-42659615e478?q=80&w=2976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
