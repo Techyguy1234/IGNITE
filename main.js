@@ -1,12 +1,6 @@
 // Example: Dynamically load events from an array
 const events = [
   {
-    title: "IGNITE Kick Off!!",
-    date: "September 4th, 7-8PM",
-    img: "https://images.unsplash.com/photo-1517263904808-5dc91e3e7044?q=80&w=3088&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    description: "Wednesday night kickoff party",
-  },
-  {
     title: "Fall Party",
     date: "October 6th, 4-7PM",
     img: "https://images.unsplash.com/photo-1516700675895-b2e35cae333c?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -69,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // URLs for different calendar views
   const mobileCalendarSrc =
-    "https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&bgcolor=%23ffffff&mode=AGENDA&showTitle=0&src=anJoaWdobWNhQGdtYWlsLmNvbQ&color=%23039BE5";
+    "https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&bgcolor=%23ffffff&mode=AGENDA&showPrint=0&showTz=0&showDate=0&showTitle=0&src=anJoaWdobWNhQGdtYWlsLmNvbQ&color=%23039BE5";
   const desktopCalendarSrc =
     "https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&bgcolor=%23ffffff&mode=MONTH&showTitle=0&src=anJoaWdobWNhQGdtYWlsLmNvbQ&color=%23039BE5";
 
