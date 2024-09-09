@@ -8,7 +8,7 @@ const events = [
   },
   {
     title: "Christmas Party",
-    date: "December 11th, 6-8PM",
+    date: "December 11th, 5:30-8:30PM",
     img: "https://images.unsplash.com/photo-1544277879-42659615e478?q=80&w=2976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "Christmas Party!!",
   },
