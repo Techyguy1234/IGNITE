@@ -4,7 +4,8 @@ const events = [
     title: "Fall Party",
     date: "October 6th, 4-7PM",
     img: "https://images.unsplash.com/photo-1516700675895-b2e35cae333c?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    description: "Fall party with a progressive dinner/hayride",
+    description:
+      "Hayride and progressive supper at Lena Neuenschwander's house. Dinner provided, friends welcome. 15103 Baumgartner Rd, Dalton, OH 44618",
   },
   {
     title: "Operation Christmas Child Shopping",
@@ -16,7 +17,8 @@ const events = [
     title: "Christmas Party",
     date: "December 11th, 5:30-8:30PM",
     img: "https://images.unsplash.com/photo-1544277879-42659615e478?q=80&w=2976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    description: "Christmas Party!!",
+    description:
+      "Christmas party at Mark & Heidi's house. Township Rd. 565, Holmesville, OH 44633",
   },
 ];
 function menuHandler() {
