@@ -1,25 +1,25 @@
 // Example: Dynamically load events from an array
 const events = [
   {
-    title: "Fall Party",
-    date: "October 6th, 4-7PM",
-    img: "https://images.unsplash.com/photo-1516700675895-b2e35cae333c?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    description:
-      "Hayride and progressive supper at Lena Neuenschwander's house. Dinner provided, friends welcome. 15103 Baumgartner Rd, Dalton, OH 44618",
+    title: "Snow Trails Tubing",
+    date: "February 15th, Time: TBD",
+    img: "https://www.snowtrails.com/upload/tubing/24-1-21_vertical-descent-tubing-park_snow-trails-ohio-01856-hd.jpg",
+    description: "Snow tubing at Snow Trails in Mansfield.",
+    link: "snowtrails.html",
   },
-  {
-    title: "Operation Christmas Child Shopping",
-    date: "November 13th, 7-8PM",
-    img: "https://s3.theark.cloud/sp-comm-arkfiles/website/occ/images/occ-printable-resources/2017/dl/occ-logo-1200x1200.png?_gl=1*76vppw*_gcl_au*MTYyMDQ2MTY2MS4xNzI1ODkzNjI1",
-    description: "More details to come",
-  },
-  {
-    title: "Christmas Party",
-    date: "December 11th, 5:30-8:30PM",
-    img: "https://images.unsplash.com/photo-1544277879-42659615e478?q=80&w=2976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    description:
-      "Christmas party at Mark & Heidi's house. Township Rd. 565, Holmesville, OH 44633",
-  },
+  // {
+  //   title: "Operation Christmas Child Shopping",
+  //   date: "November 13th, 7-8PM",
+  //   img: "https://s3.theark.cloud/sp-comm-arkfiles/website/occ/images/occ-printable-resources/2017/dl/occ-logo-1200x1200.png?_gl=1*76vppw*_gcl_au*MTYyMDQ2MTY2MS4xNzI1ODkzNjI1",
+  //   description: "More details to come",
+  // },
+  // {
+  //   title: "Christmas Party",
+  //   date: "December 11th, 5:30-8:30PM",
+  //   img: "https://images.unsplash.com/photo-1544277879-42659615e478?q=80&w=2976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  //   description:
+  //     "Christmas party at Mark & Heidi's house. Township Rd. 565, Holmesville, OH 44633",
+  // },
 ];
 function menuHandler() {
   document.querySelector("#open-nav-menu").addEventListener("click", () => {
@@ -51,6 +51,7 @@ function renderEvents() {
   events.forEach((event) => {
     const eventItem = document.createElement("div");
     eventItem.className = "event-item";
+    eventItem.href = event.link;
     eventItem.innerHTML = `
       <img src="${event.img}" alt="${event.title}">
       <h4>${event.title}</h4>
